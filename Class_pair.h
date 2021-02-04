@@ -4,40 +4,40 @@ using namespace std;
 class Pair
 {
 private:
-	int int_num; //объявили целочисленную переменную 
-	double double_num; //объявили переменную типа double
+	int int_num; //РѕР±СЉСЏРІРёР»Рё С†РµР»РѕС‡РёСЃР»РµРЅРЅСѓСЋ РїРµСЂРµРјРµРЅРЅСѓСЋ 
+	double double_num; //РѕР±СЉСЏРІРёР»Рё РїРµСЂРµРјРµРЅРЅСѓСЋ С‚РёРїР° double
 public:
-	explicit Pair() : int_num(0), double_num(0) {} //конструктор без параметров
-	Pair(const int a, const double b) //конструктор с параметрами
+	explicit Pair() : int_num(0), double_num(0) {} //РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ Р±РµР· РїР°СЂР°РјРµС‚СЂРѕРІ
+	Pair(const int a, const double b) //РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ РїР°СЂР°РјРµС‚СЂР°РјРё
 	{
 		int_num = a;
 		double_num = b;
 	}
-	friend istream& operator>> (istream& in, Pair& numbers) //перегрузка опрератора ввода
+	friend istream& operator>> (istream& in, Pair& numbers) //РїРµСЂРµРіСЂСѓР·РєР° РѕРїСЂРµСЂР°С‚РѕСЂР° РІРІРѕРґР°
 	{
-		cout << "Ввод чисел класса Pair" << endl;
-		cout << "Введите ЦЕЛОЕ число: ";
-		in >> numbers.int_num; //считываем целое число
-		cout << "Введите ВЕЩЕСТВЕННОЕ число: ";
-		in >> numbers.double_num; //считываем вещественное число
+		cout << "Р’РІРѕРґ С‡РёСЃРµР» РєР»Р°СЃСЃР° Pair" << endl;
+		cout << "Р’РІРµРґРёС‚Рµ Р¦Р•Р›РћР• С‡РёСЃР»Рѕ: ";
+		in >> numbers.int_num; //СЃС‡РёС‚С‹РІР°РµРј С†РµР»РѕРµ С‡РёСЃР»Рѕ
+		cout << "Р’РІРµРґРёС‚Рµ Р’Р•Р©Р•РЎРўР’Р•РќРќРћР• С‡РёСЃР»Рѕ: ";
+		in >> numbers.double_num; //СЃС‡РёС‚С‹РІР°РµРј РІРµС‰РµСЃС‚РІРµРЅРЅРѕРµ С‡РёСЃР»Рѕ
 		return in;
 	}
-	friend ostream& operator<< (ostream& out, const Pair& numbers) //перегрузка опрератора вывода
+	friend ostream& operator<< (ostream& out, const Pair& numbers) //РїРµСЂРµРіСЂСѓР·РєР° РѕРїСЂРµСЂР°С‚РѕСЂР° РІС‹РІРѕРґР°
 	{
 		out << numbers.int_num << ":" << numbers.double_num;
 		return out;
 	}
-	bool operator== (const Pair& numbers) const //перегрузка опрератора сравнения ==
+	bool operator== (const Pair& numbers) const //РїРµСЂРµРіСЂСѓР·РєР° РѕРїСЂРµСЂР°С‚РѕСЂР° СЃСЂР°РІРЅРµРЅРёСЏ ==
 	{
 		return (int_num == numbers.int_num) && (double_num == numbers.double_num);
 	}
-	bool operator!= (const Pair& numbers) const //перегрузка опрератора сравнения !=
+	bool operator!= (const Pair& numbers) const //РїРµСЂРµРіСЂСѓР·РєР° РѕРїСЂРµСЂР°С‚РѕСЂР° СЃСЂР°РІРЅРµРЅРёСЏ !=
 	{
 		return !((int_num == numbers.int_num) && (double_num == numbers.double_num));
 	}
-	Pair& operator= (const Pair& numbers) //перегрузка опереатора присваивания
+	Pair& operator= (const Pair& numbers) //РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂРµР°С‚РѕСЂР° РїСЂРёСЃРІР°РёРІР°РЅРёСЏ
 	{
-		if (this == &numbers) //если элементы равны, возвращаем текущий
+		if (this == &numbers) //РµСЃР»Рё СЌР»РµРјРµРЅС‚С‹ СЂР°РІРЅС‹, РІРѕР·РІСЂР°С‰Р°РµРј С‚РµРєСѓС‰РёР№
 		{
 			return *this;
 		}
