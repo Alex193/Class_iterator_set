@@ -1,4 +1,4 @@
-# Laboratory work iterator "Set" C++ Applied Mathematics HSE
+# Laboratory work "Iterator "Set" C++ Applied Mathematics HSE
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 ***ЗАДАНИЕ***
 
